@@ -1,0 +1,9 @@
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.site-index .jumbotron {
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #f8f9fa;
+}

@@ -1,0 +1,60 @@
+{
+    "name": "americor/yii2-app",
+    "description": "Minimal Yii2 application scaffold for Docker sandbox",
+    "type": "project",
+    "keywords": [
+        "yii2",
+        "framework",
+        "docker"
+    ],
+    "license": "BSD-3-Clause",
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0",
+        "yiisoft/yii2": "^2.0.49",
+        "yiisoft/yii2-composer": "^2.0",
+        "yiisoft/yii2-bootstrap5": "^2.0",
+        "yiisoft/yii2-symfonymailer": "^2.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "^2.1",
+        "yiisoft/yii2-gii": "^2.2",
+        "phpunit/phpunit": "^9.6"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "config": {
+        "process-timeout": 1800,
+        "sort-packages": true,
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": ""
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "yii\\composer\\Installer::postInstall"
+        ],
+        "post-update-cmd": [
+            "yii\\composer\\Installer::postUpdate"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postInstall": {
+            "setPermission": [
+                {
+                    "runtime": "0775",
+                    "web/assets": "0775"
+                }
+            ]
+        }
+    }
+}
