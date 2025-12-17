@@ -34,4 +34,4 @@ Permissions:
 - Guests can browse public pages (home, author/book listings, detail views, reports).
 - Authenticated users gain CRUD access plus subscription management.
 
-That’s the whole system—compose up, migrate, log in, add authors/books, and watch the event logs to see SMS notifications being “sent” to subscribers.***
+That’s the whole system - compose up, migrate, log in, add authors/books, and watch the event logs to see SMS notifications being “sent” to subscribers.***
